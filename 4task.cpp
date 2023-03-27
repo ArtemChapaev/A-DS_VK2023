@@ -105,9 +105,19 @@ int main() {
 }
 
 template<class T, class Compare>
-Heap<T, Compare>::Heap(const T *arr, size_t size, Compare cmp) : buffer(nullptr), bufferSize(0), size(0), cmp(cmp) {
-    for (const T &el: arr) {
-        Add(el);
+Heap<T, Compare>::Heap(const T *arr, size_t size, Compare cmp) : buffer(nullptr), bufferSize(size), size(size),
+                                                                 cmp(cmp) {
+    if (bufferSize == 0) {
+        return;
+    }
+
+    buffer = new T[bufferSize];
+    for (int i = 0; i < size; ++i) {
+        buffer[i] = arr[i];
+    }
+
+    for (int i = size / 2 - 1; i >= 0; --i) {
+        SiftDown(i);
     }
 }
 

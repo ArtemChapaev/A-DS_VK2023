@@ -15,3 +15,9 @@ add_executable(4task 4task.cpp)
 
 project(5task)
 add_executable(5task 5task.cpp)
+
+project(6task)
+add_executable(6task 6task.cpp)
+
+project(7task)
+add_executable(7task 7task.cpp)
