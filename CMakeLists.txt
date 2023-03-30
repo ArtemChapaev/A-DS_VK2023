@@ -21,3 +21,12 @@ add_executable(6task 6task.cpp)
 
 project(7task)
 add_executable(7task 7task.cpp)
+
+project(RK_1)
+add_executable(RK_1 RK_1.cpp)
+
+project(RK_2)
+add_executable(RK_2 RK_2.cpp)
+
+project(RK_3)
+add_executable(RK_3 RK_3.cpp)
