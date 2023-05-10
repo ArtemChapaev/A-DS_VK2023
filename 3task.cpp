@@ -25,6 +25,8 @@ public:
     BTree(size_t _t) : root(nullptr), t(_t) {}
 
     ~BTree() { delete root; }
+    BTree(BTree &) = delete;
+    BTree &operator=(BTree &) = delete;
 
     void Insert(const T &key);
 

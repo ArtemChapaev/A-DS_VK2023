@@ -9,3 +9,6 @@ add_executable(2task 2task.cpp)
 
 project(3task)
 add_executable(3task 3task.cpp)
+
+project(4task)
+add_executable(4task 4task.cpp)
